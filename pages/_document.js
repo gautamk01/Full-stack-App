@@ -1,6 +1,4 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { Provider } from "react-supabase";
-import { supabase } from "@/utils/supabaseClient";
 
 export default function Document() {
   return (
