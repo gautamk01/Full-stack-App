@@ -79,28 +79,31 @@ function Page({ countries }) {
         </button>
       </form>
       <ul>
-        {data.map((country) => (
-          <div className="h-[20vh] w-[100%] m-1 flex flex-wrap justify-center items-center">
+        <div className="h-[10vh] w-[100%]  flex flex-wrap  justify-center items-center">
+          {data.map((country) => (
             <li
               key={country.id}
-              className="bg-white text-zinc-900 p-10 rounded-lg"
+              className="bg-white text-zinc-900 w-[100%] flex flex-row flex-wrap p-10 rounded-lg m-1"
             >
-              {country.name}
-              <button
-                className="m-2 bg-green-400 text-black"
-                onClick={() => handleUpdate(country)}
-              >
-                Update
-              </button>
-              <button
-                className="m-2 bg-red-400"
-                onClick={() => handleDelete(country)}
-              >
-                Delete
-              </button>
+              <div className=" text-zinc-900 w-[40%]"> {country.name}</div>
+              <div className=" text-zinc-900 w-[60%]">
+                {" "}
+                <button
+                  className="m-2 bg-green-400 text-black"
+                  onClick={() => handleUpdate(country)}
+                >
+                  Update
+                </button>
+                <button
+                  className="m-2 bg-red-400"
+                  onClick={() => handleDelete(country)}
+                >
+                  Delete
+                </button>
+              </div>
             </li>
-          </div>
-        ))}
+          ))}
+        </div>
       </ul>
     </div>
   );
